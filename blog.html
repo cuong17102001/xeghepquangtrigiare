@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Blog du lịch Quảng Trị - Huế: địa điểm tham quan, ẩm thực, kinh nghiệm." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://xeghepquangtri.com/blog" />
+
+    <link rel="icon" href="./images/favicon.ico" />
+    <title>Blog Du Lịch | Xe Ghép Quảng Trị - Huế</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/blog.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <style>
+        .blog-page-hero {
+            padding: 28px 0 10px;
+        }
+
+        .blog-page-hero h2 {
+            margin-bottom: 8px;
+        }
+
+        .blog-page-hero p {
+            margin: 0;
+            color: #555;
+        }
+
+        .blog-grid {
+            margin-top: 18px;
+        }
+
+        .skeleton {
+            border-radius: 12px;
+            background: linear-gradient(90deg, #eee 25%, #f6f6f6 37%, #eee 63%);
+            background-size: 400% 100%;
+            animation: shimmer 1.2s ease-in-out infinite;
+        }
+
+        .skeleton.img {
+            height: 160px;
+        }
+
+        .skeleton.line {
+            height: 14px;
+            margin: 10px 0;
+        }
+
+        .skeleton.line.w60 {
+            width: 60%;
+        }
+
+        .skeleton.line.w85 {
+            width: 85%;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: 100% 0;
+            }
+
+            100% {
+                background-position: -100% 0;
+            }
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .notice {
+            margin: 12px 0 0;
+            padding: 10px 12px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            background: rgba(255, 140, 0, 0.08);
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 style="color: white;">Dịch Vụ Xe Ghép Quảng Trị - Huế</h1>
+            <p style="color: white;">Giá rẻ - An toàn - Tiện lợi</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li><a href="./index.html" class="">Trang Chủ</a></li>
+                <li><a href="./blog.html" class="active">Blog Du Lịch</a></li>
+                <li><a href="./dich-vu.html" class="">Dịch Vụ</a></li>
+                <li><a href="./bang-gia.html" class="">Bảng Giá</a></li>
+                <li><a href="./lien-he.html" class="">Liên Hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="blog-page-hero" aria-label="Blog du lịch">
+            <h2>Blog Du Lịch Quảng Trị - Huế</h2>
+            <p>Danh sách bài viết theo từng địa điểm. Chọn bài để xem chi tiết.</p>
+        </section>
+
+        <section aria-label="Danh sách bài viết">
+            <div id="blog-loading" class="hidden" aria-label="Đang tải bài viết">
+                <div class="blog-grid" style="margin-top:18px;">
+                    <article class="blog-card">
+                        <div class="skeleton img"></div>
+                        <div class="blog-content">
+                            <div class="skeleton line w85"></div>
+                            <div class="skeleton line w60"></div>
+                            <div class="skeleton line"></div>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <div class="skeleton img"></div>
+                        <div class="blog-content">
+                            <div class="skeleton line w85"></div>
+                            <div class="skeleton line w60"></div>
+                            <div class="skeleton line"></div>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <div class="skeleton img"></div>
+                        <div class="blog-content">
+                            <div class="skeleton line w85"></div>
+                            <div class="skeleton line w60"></div>
+                            <div class="skeleton line"></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div id="blog-error" class="notice hidden">Không tải được bài viết từ API. Đang hiển thị bài viết mẫu.</div>
+
+            <div class="blog-grid" id="blog-grid">
+                <!-- Render bằng JS từ ./js/posts.js nếu có dữ liệu. Nếu không có, dùng các bài mẫu bên dưới. -->
+<!-- 
+                <article class="blog-card">
+                    <img src="./images/dai-noi-hue.jpg" alt="Đại Nội Huế" loading="lazy" />
+                    <div class="blog-content">
+                        <h3>Đại Nội Huế - Di Sản Văn Hóa Thế Giới</h3>
+                        <p>Khám phá kinh thành triều Nguyễn, nét đẹp cổ kính và lịch sử lâu đời...</p>
+                        <a href="./blog/dai-noi-hue.html" class="read-more">Đọc thêm</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <img src="./images/dia-dao-vinh-moc.jpg" alt="Địa đạo Vịnh Mốc" loading="lazy" />
+                    <div class="blog-content">
+                        <h3>Địa Đạo Vịnh Mốc - Chứng Tích Lịch Sử</h3>
+                        <p>Tìm hiểu công trình quân sự độc đáo thời chiến và trải nghiệm không gian dưới lòng đất...</p>
+                        <a href="./blog/dia-dao-vinh-moc.html" class="read-more">Đọc thêm</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <img src="./images/am-thuc-hue.jpg" alt="Ẩm thực Huế" loading="lazy" />
+                    <div class="blog-content">
+                        <h3>Ẩm Thực Huế - Tinh Hoa Ẩm Thực</h3>
+                        <p>Gợi ý các món nên thử, địa chỉ quán ngon và kinh nghiệm ăn uống ở Huế...</p>
+                        <a href="./blog/am-thuc-hue.html" class="read-more">Đọc thêm</a>
+                    </div>
+                </article> -->
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Dịch Vụ Xe Ghép</h3>
+                    <ul>
+                        <li><a href="/dich-vu/xe-ghep-quang-tri-hue" title="Xe ghép Quảng Trị - Huế">Xe ghép Quảng Trị -
+                                Huế</a></li>
+                        <li><a href="/dich-vu/xe-ghep-quang-tri-san-bay-hue" title="Xe ghép Quảng Trị - Sân bay Huế">Xe
+                                ghép Quảng Trị - Sân bay Huế</a></li>
+                        <li><a href="/dich-vu/xe-ghep-quang-tri-dong-ha" title="Xe ghép Quảng Trị - Đông Hà">Xe ghép
+                                Quảng Trị - Đông Hà</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Khám Phá Du Lịch</h3>
+                    <ul>
+                        <li><a href="/blog/danh-muc/dia-diem-du-lich" title="Địa điểm du lịch Quảng Trị - Huế">Địa Điểm
+                                Du Lịch</a></li>
+                        <li><a href="/blog/danh-muc/am-thuc" title="Ẩm thực đặc sắc Quảng Trị - Huế">Ẩm Thực Đặc Sắc</a>
+                        </li>
+                        <li><a href="/blog/danh-muc/van-hoa" title="Văn hóa truyền thống Quảng Trị - Huế">Văn Hóa Truyền
+                                Thống</a></li>
+                        <li><a href="/blog/danh-muc/kinh-nghiem" title="Kinh nghiệm du lịch Quảng Trị - Huế">Kinh Nghiệm
+                                Du Lịch</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Về Chúng Tôi</h3>
+                    <ul>
+                        <li><a href="/ve-chung-toi" title="Giới thiệu về dịch vụ xe ghép Quảng Trị - Huế">Giới Thiệu</a>
+                        </li>
+                        <li><a href="/bang-gia" title="Bảng giá xe ghép Quảng Trị - Huế">Bảng Giá</a></li>
+                        <li><a href="/lien-he" title="Liên hệ đặt xe ghép Quảng Trị - Huế">Liên Hệ</a></li>
+                        <li><a href="/chinh-sach" title="Chính sách dịch vụ xe ghép">Chính Sách</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <img src="./images/vinfastvf6-1.png" alt="Xe Ghép Quảng Trị - Huế Logo" width="200" class="logo"
+                        loading="lazy" />
+                    <p>Dịch Vụ Xe Ghép Quảng Trị - Huế</p>
+                </div>
+                <div class="footer-legal">
+                    <p>&copy; Dịch Vụ Xe Ghép Quảng Trị - Huế. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="/chinh-sach-bao-mat" title="Chính sách bảo mật">Chính Sách Bảo Mật</a>
+                        <a href="/dieu-khoan-su-dung" title="Điều khoản sử dụng">Điều Khoản Sử Dụng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Facebook Floating Icon -->
+    <a href="https://www.facebook.com/nguyen.duc.hieu1996" class="facebook-float" target="_blank" rel="noopener" aria-label="Facebook">
+        <img src="./images/favorite.png" alt="Facebook" />
+    </a>
+    <!-- Phone Floating Icon -->
+    <a href="tel:0888404345" class="phone-float" aria-label="Gọi điện">
+        <img src="./images/phone.png" alt="Phone" />
+    </a>
+    <!-- Zalo Floating Icon -->
+    <a href="https://zalo.me/0888404345" class="zalo-float" target="_blank" aria-label="Chat Zalo">
+        <img src="./images/zalo.png" alt="Zalo" />
+    </a>
+
+    <script src="./js/posts.js"></script>
+    <script>
+        // Nếu API posts hoạt động (Google Apps Script), sẽ render danh sách bài viết tự động.
+        // Nếu không, phần bài mẫu HTML phía trên vẫn hiển thị.
+        (async function () {
+            const loadingEl = document.getElementById('blog-loading');
+            const errorEl = document.getElementById('blog-error');
+
+            function show(el) {
+                if (!el) return;
+                el.classList.remove('hidden');
+            }
+
+            function hide(el) {
+                if (!el) return;
+                el.classList.add('hidden');
+            }
+
+            try {
+                if (typeof getAllPosts !== 'function') return;
+
+                // show loading while calling API
+                show(loadingEl);
+                hide(errorEl);
+
+                const posts = await getAllPosts();
+                if (!Array.isArray(posts) || posts.length === 0) {
+                    hide(loadingEl);
+                    return;
+                }
+
+                const grid = document.getElementById('blog-grid');
+                if (!grid) {
+                    hide(loadingEl);
+                    return;
+                }
+
+                // Xóa bài mẫu
+                grid.innerHTML = '';
+
+                posts.forEach((post) => {
+                    const card = document.createElement('article');
+                    card.className = 'blog-card';
+
+                    const id = post.id || post.postId || post._id || post.slug || '';
+                    const detailUrl = id ? `./blog/post.html?id=${encodeURIComponent(id)}` : (post.url || '#');
+
+                    card.innerHTML = `
+                        <img src="${"./images/" + post.image || './images/favorite.png'}" alt="${post.title || 'Bài viết'}" loading="lazy" />
+                        <div class="blog-content">
+                            <h3>${post.title || ''}</h3>
+                            <p>${post.description || ''}</p>
+                            <a href="${detailUrl}" class="read-more">Đọc thêm</a>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+
+                hide(loadingEl);
+            } catch (e) {
+                hide(loadingEl);
+                show(errorEl);
+                // fallback: giữ bài mẫu
+            }
+        })();
+    </script>
+</body>
+
+</html>

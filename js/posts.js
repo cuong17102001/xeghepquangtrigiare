@@ -1,4 +1,4 @@
-const postAPIScript = "https://script.google.com/macros/s/AKfycbxZte7zZppJ26DSDB23cNSbwnFWl5623-xssrVWmLDMXCRxgy_1TBeKnovlAZ2scHZy/exec";
+const postAPIScript = "https://script.google.com/macros/s/AKfycbzwwrp6itHTLde2csbknBSFAcER43hWQCmsTpAW5DgwQOwkVZe08dIMUUnvc_nlgGA-/exec";
 
 const getAllPosts = async () => {
     const response = await fetch(postAPIScript, {
