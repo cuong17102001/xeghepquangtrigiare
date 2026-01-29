@@ -308,7 +308,7 @@
                     const detailUrl = id ? `./blog/post.html?id=${encodeURIComponent(id)}` : (post.url || '#');
 
                     card.innerHTML = `
-                        <img src="${"./images/" + post.image || './images/favorite.png'}" alt="${post.title || 'Bài viết'}" loading="lazy" />
+                        <img src="${(post.image.startsWith('http') ? post.image : `./images/${post.image}`) || './images/favorite.png'}" alt="${post.title || 'Bài viết'}" loading="lazy" />
                         <div class="blog-content">
                             <h3>${post.title || ''}</h3>
                             <p>${post.description || ''}</p>
