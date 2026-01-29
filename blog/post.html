@@ -237,54 +237,54 @@
                 <div class="footer-section">
                     <h3>Dịch Vụ Xe Ghép</h3>
                     <ul>
-                        <li><a href="/dich-vu/xe-ghep-quang-tri-hue" title="Xe ghép Quảng Trị - Huế">Xe ghép Quảng Trị -
-                                Huế</a></li>
-                        <li><a href="/dich-vu/xe-ghep-quang-tri-san-bay-hue" title="Xe ghép Quảng Trị - Sân bay Huế">Xe
-                                ghép Quảng Trị - Sân bay Huế</a></li>
-                        <li><a href="/dich-vu/xe-ghep-quang-tri-dong-ha" title="Xe ghép Quảng Trị - Đông Hà">Xe ghép
-                                Quảng Trị - Đông Hà</a></li>
+                        <li><a href="../dich-vu.html" title="Các tuyến xe ghép phổ biến">Các tuyến phổ biến</a></li>
+                        <li><a href="../bang-gia.html" title="Bảng giá xe ghép">Bảng giá & ưu đãi</a></li>
+                        <li><a href="../lien-he.html" title="Liên hệ đặt xe">Đặt xe nhanh</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-section">
-                    <h3>Khám Phá Du Lịch</h3>
+                    <h3>Blog Du Lịch</h3>
                     <ul>
-                        <li><a href="/blog/danh-muc/dia-diem-du-lich" title="Địa điểm du lịch Quảng Trị - Huế">Địa Điểm
-                                Du Lịch</a></li>
-                        <li><a href="/blog/danh-muc/am-thuc" title="Ẩm thực đặc sắc Quảng Trị - Huế">Ẩm Thực Đặc Sắc</a>
-                        </li>
-                        <li><a href="/blog/danh-muc/van-hoa" title="Văn hóa truyền thống Quảng Trị - Huế">Văn Hóa Truyền
-                                Thống</a></li>
-                        <li><a href="/blog/danh-muc/kinh-nghiem" title="Kinh nghiệm du lịch Quảng Trị - Huế">Kinh Nghiệm
-                                Du Lịch</a></li>
+                        <li><a href="../blog.html" title="Bài viết du lịch Quảng Trị - Huế">Bài viết mới nhất</a></li>
+                        <li><a href="../blog.html" title="Điểm đến nổi bật">Điểm đến nổi bật</a></li>
+                        <li><a href="../blog.html" title="Ẩm thực & trải nghiệm">Ẩm thực & trải nghiệm</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-section">
-                    <h3>Về Chúng Tôi</h3>
+                    <h3>Thông Tin</h3>
                     <ul>
-                        <li><a href="/ve-chung-toi" title="Giới thiệu về dịch vụ xe ghép Quảng Trị - Huế">Giới Thiệu</a>
-                        </li>
-                        <li><a href="/bang-gia" title="Bảng giá xe ghép Quảng Trị - Huế">Bảng Giá</a></li>
-                        <li><a href="/lien-he" title="Liên hệ đặt xe ghép Quảng Trị - Huế">Liên Hệ</a></li>
-                        <li><a href="/chinh-sach" title="Chính sách dịch vụ xe ghép">Chính Sách</a></li>
+                        <li><a href="../index.html" title="Trang chủ">Trang chủ</a></li>
+                        <li><a href="../dich-vu.html" title="Dịch vụ">Dịch vụ</a></li>
+                        <li><a href="../bang-gia.html" title="Bảng giá">Bảng giá</a></li>
+                        <li><a href="../lien-he.html" title="Liên hệ">Liên hệ</a></li>
                     </ul>
                 </div>
             </div>
+
             <div class="footer-bottom">
                 <div class="footer-logo">
-                    <img src="../images/vinfastvf6-1.png" alt="Xe Ghép Quảng Trị - Huế Logo" width="200" class="logo"
-                        loading="lazy" />
-                    <p>Dịch Vụ Xe Ghép Quảng Trị - Huế</p>
+                    <img src="../images/vinfastvf6-1.png" alt="Xe Ghép Quảng Trị - Huế" class="logo" loading="lazy">
+                    <p>Xe Ghép Quảng Trị - Huế</p>
                 </div>
                 <div class="footer-legal">
-                    <p>&copy; Dịch Vụ Xe Ghép Quảng Trị - Huế. All rights reserved.</p>
+                    <p>&copy; <span id="footer-year"></span> Xe Ghép Quảng Trị - Huế. All rights reserved.</p>
                     <div class="legal-links">
-                        <a href="/chinh-sach-bao-mat" title="Chính sách bảo mật">Chính Sách Bảo Mật</a>
-                        <a href="/dieu-khoan-su-dung" title="Điều khoản sử dụng">Điều Khoản Sử Dụng</a>
+                        <a href="../bang-gia.html" title="Bảng giá">Bảng giá</a>
+                        <a href="../lien-he.html" title="Liên hệ">Liên hệ</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        (function () {
+            var el = document.getElementById('footer-year');
+            if (el) el.textContent = String(new Date().getFullYear());
+        })();
+    </script>
 
     <!-- Facebook Floating Icon -->
     <a href="https://www.facebook.com/nguyen.duc.hieu1996" class="facebook-float" target="_blank" rel="noopener" aria-label="Facebook">
@@ -344,8 +344,8 @@
                 document.title = postTitle + ' | Blog Du Lịch';
 
                 titleEl.textContent = postTitle;
-                metaEl.textContent = post.createdAt || post.date || 'Bài viết du lịch';
-
+                metaEl.textContent = new Date(post.createdAt).toLocaleDateString() || post.date || 'Bài viết du lịch';
+                metaEl.append(` - ${post.category}`)
                 // Hero image
                 const imgSrc = post.image
                     ? (post.image.startsWith('http') ? post.image : `../images/${post.image}`)
