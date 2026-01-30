@@ -1,4 +1,4 @@
-const postAPIScript = "https://cloudflare-worker-xeghepquangtrigiare.nqcuong-1710.workers.dev/posts";
+const postAPIScript = "https://script.google.com/macros/s/AKfycbzwwrp6itHTLde2csbknBSFAcER43hWQCmsTpAW5DgwQOwkVZe08dIMUUnvc_nlgGA-/exec";
 
 const getAllPosts = async () => {
     const response = await fetch(postAPIScript, {
